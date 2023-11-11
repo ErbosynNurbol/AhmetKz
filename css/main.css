@@ -23,7 +23,7 @@ header{
     right: 0;
     top: 0;
     z-index: 999999;
-    height: 65px;
+    min-height: 65px;
     background-color: var(--main-color);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
@@ -34,9 +34,9 @@ header nav{
     display: flex;
     flex-direction: row;
     padding: 0 15px;
-}
-header nav > *{
-    flex:1 auto;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
 }
 header .site-logo{
     width: 35px;
@@ -46,6 +46,10 @@ header .site-logo{
 ul.site-nav{
     margin: 0;
     padding: 0;
+    flex-grow: 1;
+}
+.site-logo-link{
+    padding-right: 15px;
 }
 div.site-lang{
     text-align: right;
@@ -136,9 +140,48 @@ ul.site-nav > li > a:hover{
 .section-mutilanguage .section-title{
     text-align: center;
     font-size: 24px;
+}
 
+.menu-bars{
+    width: 32px;
+    max-width: 32px;
+    height: 32px;
+    min-width: 32px;
+    background-color: transparent;
+    border: none;
+    margin-left: 15px;
+}
+.menu-bars img{
+    width: 100%;
+    height: 100%;
+}
+.pc-hidden{
+    display: none;
+}
+.hidden{
+    display: none;
+}
+.dropdown-div{
+    height: 0;
+    overflow: hidden;
+    transition:height 0.7s ease-out;
+}
+.dropdown-div ul{
+    margin: 0;
+    padding: 15px;
+    margin-top: -20px;
+}
+.dropdown-div ul li{
+    list-style: none;
+}
+.dropdown-div ul li a{
+    color:#fff;
+    line-height: 2;
 }
 @media screen and (max-width:600px){
+    .site-logo-link{
+        flex-grow: 1;
+    }
     main{
         height: auto;
         min-height: 100vh;
@@ -162,5 +205,8 @@ ul.site-nav > li > a:hover{
     .soft-info button{
         padding: 7px 17px;
         font-size: 18px;
+    }
+    .pc-hidden{
+        display: block;
     }
 }

@@ -13,20 +13,18 @@
 <body>
     <header>
         <nav>
-            <ul class="site-nav">
+            <a href="#" class="site-logo-link"><img class="site-logo" src="images/logo.png" alt="Ahmet Office Logo" /></a>
+            <ul id="site-nav" class="site-nav mobile-hidden">
                 <li>
-                    <a href="#"><img class="site-logo" src="images/logo.png" alt="Ahmet Office Logo" /></a>
-                </li>
-                <li class="mobile-hidden">
                     <a href="#" data-localkey="ls_Home">Басты бет </a>
                 </li>
-                <li class="mobile-hidden">
+                <li>
                     <a href="#language" data-localkey="ls_Langugelist">Тілдер</a>
                 </li>
-                <li class="mobile-hidden">
+                <li>
                     <a href="#">Форматтар</a>
                 </li>
-                <li class="mobile-hidden">
+                <li>
                     <a href="#">Темалар</a>
                 </li>
             </ul>
@@ -37,7 +35,12 @@
                     <option value="tr">Turkish</option>
                 </select>
             </div>
+            <button type="button" class="menu-bars pc-hidden">
+                <img src="images/menu.png">
+            </button>
         </nav>
+        <div class="dropdown-div">
+        </div>
     </header>
     <main>
         <section class="section-soft">
